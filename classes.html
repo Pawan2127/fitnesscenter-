@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes - Fitness Center</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background: #f8f9fa;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      .classes {
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .classes h2 {
+        font-size: 2.5em;
+        color: #0074d9;
+        margin-bottom: 20px;
+      }
+
+      .class-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .class-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 300px;
+      }
+
+      .class-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      }
+
+      .class-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .class-card h3 {
+        margin: 0;
+        padding: 12px;
+        background: #0074d9;
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .class-card p {
+        padding: 12px;
+        color: #555;
+        text-align: justify;
+      }
+
+      @media (max-width: 768px) {
+        .class-cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .class-card {
+          width: 100%;
+          max-width: 90%;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #333;
+        color: white;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul style="font-weight: bold">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="tracker.html">Activity Tracker</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="classes">
+        <h2>Explore Our Programs</h2>
+        <div class="class-cards">
+          <div class="class-card">
+            <img src="hiitworkout.jpg" alt="HIIT Workouts" />
+            <h3>HIIT Workouts</h3>
+            <p>
+              Push your limits with high-intensity interval training, designed
+              to boost your fitness in short sessions.
+            </p>
+          </div>
+          <div class="class-card">
+            <img src="poweryoga.jpg" alt="Power Yoga" />
+            <h3>Power Yoga</h3>
+            <p>
+              Energize your body and calm your mind with a blend of yoga and
+              dynamic movements.
+            </p>
+          </div>
+          <div class="class-card">
+            <img src="bootcamp.jpg" alt="Bootcamp" />
+            <h3>Bootcamp</h3>
+            <p>
+              Challenge yourself with strength and cardio circuits that push you
+              to the max.
+            </p>
+          </div>
+          <div class="class-card">
+            <img src="cycling.jpg" alt="Cycling Blast" />
+            <h3>Cycling Blast</h3>
+            <p>
+              Ride to the beat with our high-energy indoor cycling sessions.
+            </p>
+          </div>
+          <div class="class-card">
+            <img src="core.jpg" alt="Core Sculpt" />
+            <h3>Core Sculpt</h3>
+            <p>
+              Strengthen your core and improve stability with focused exercises.
+            </p>
+          </div>
+          <div class="class-card">
+            <img src="kickboxing.jpg" alt="Kickboxing" />
+            <h3>Kickboxing</h3>
+            <p>
+              Unleash your power and learn self-defense with our dynamic
+              kickboxing classes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Fitness Center. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

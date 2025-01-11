@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Inquiry - Fitness Center</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Global Styles */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: "Roboto", sans-serif;
+        background-color: #eef9f6; /* Subtle green background */
+        margin: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #0074d9;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .inquiry-section {
+        background-color: white;
+        padding: 30px;
+        max-width: 600px;
+        margin: 50px auto;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      .inquiry-section h2 {
+        color: #0074d9;
+        margin-bottom: 10px;
+      }
+
+      .inquiry-section p {
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .inquiry-section form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .inquiry-section input,
+      .inquiry-section textarea,
+      .inquiry-section button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s ease;
+      }
+
+      .inquiry-section input:focus,
+      .inquiry-section textarea:focus {
+        border-color: #0074d9;
+        outline: none;
+      }
+
+      .inquiry-section button {
+        background: #0074d9;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .inquiry-section button:hover {
+        background: #0074d9;
+      }
+
+      .success-message {
+        display: none;
+        margin-top: 20px;
+        color: #0074d9;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+      }
+    </style>
+    <script>
+      function handleInquirySubmit(event) {
+        event.preventDefault(); // Prevents default form submission
+
+        // Show success message
+        const successMessage = document.getElementById("success-message");
+        successMessage.style.display = "block";
+
+        // Clear the form
+        document.querySelector(".inquiry-section form").reset();
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="tracker.html">Activity Tracker</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="inquiry-section">
+        <h2>Membership Inquiry</h2>
+        <p>
+          Interested in joining our fitness community? Fill out the form below, and our team will get back to you with all the details you need.
+        </p>
+        <form onsubmit="handleInquirySubmit(event)">
+          <input type="text" placeholder="Enter Your Name" required />
+          <input type="email" placeholder="Enter Your Email" required />
+          <input type="tel" placeholder="Enter Your Phone Number" required />
+          <textarea placeholder="Your Message or Questions" rows="4" required></textarea>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+        <div id="success-message" class="success-message">
+          Thank you! Your inquiry has been successfully submitted.
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Fitness Center. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

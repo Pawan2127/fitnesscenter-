@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Fitness Center</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+      }
+      header {
+        background: #0074d9;
+        padding: 20px 0;
+        text-align: center;
+        color: white;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #ff851b;
+        transform: scale(1.1);
+      }
+      .hero {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("gym-body.jpg") center/cover no-repeat;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 4em;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      .hero p {
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      .cta {
+        margin-top: 25px;
+        padding: 15px 25px;
+        background: #ff851b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+      .cta:hover {
+        background: #ff6347;
+        transform: scale(1.05);
+      }
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: auto;
+      }
+      footer p {
+        font-size: 0.9em;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="tracker.html">Activity Tracker</li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Welcome to Your Ultimate Fitness Destination</h1>
+          <p>Transform your body, mind, and life with us!</p>
+          <button class="cta" onclick="location.href='membership.html'">
+            Get Started Today
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Fitness Center. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

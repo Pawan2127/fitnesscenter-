@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Fitness Center</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #0074d9;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      header nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      header nav ul li a:hover {
+        color: #f1c40f;
+      }
+
+      main {
+        flex: 1;
+        background-color: #fff;
+        padding: 50px 20px;
+      }
+
+      /* Contact Section */
+      .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+      }
+
+      .contact-header {
+        font-size: 36px;
+        color: #0074d9;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .contact-description {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 40px;
+      }
+
+      .contact-form {
+        background-color: #f9f9f9;
+        padding: 30px;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: #0074d9;
+        outline: none;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 15px;
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .contact-form button:hover {
+        background-color: #0074d9;
+      }
+
+      .contact-info {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .info-card {
+        background-color: #0074d9;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 280px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        text-align: center;
+      }
+
+      .info-card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .info-card p {
+        font-size: 16px;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="tracker.html">Activity Tracker</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-container">
+        <h2 class="contact-header">Get In Touch With Us</h2>
+        <p class="contact-description">
+          We're here to help you with any questions you may have. Whether you're
+          looking to join our fitness center or need more information about our
+          classes, feel free to drop us a message!
+        </p>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="tel" placeholder="Your Phone Number" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Our Location</h3>
+            <p>123 Fitness Ave, Health City, Fitland</p>
+          </div>
+          <div class="info-card">
+            <h3>Email Us</h3>
+            <p>info@fitnesscenter.com</p>
+          </div>
+          <div class="info-card">
+            <h3>Call Us</h3>
+            <p>+123 456 7890</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Fitness Center. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

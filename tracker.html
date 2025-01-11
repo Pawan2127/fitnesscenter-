@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Activity Tracker - Fitness Center</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #eef9f6; /* Subtle green background */
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background: #0074d9;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      /* Tracker Section */
+      .tracker {
+        padding: 40px;
+        max-width: 600px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .tracker h2 {
+        color: #0074d9;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .tracker form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .tracker form label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .tracker form select,
+      .tracker form input,
+      .tracker form button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .tracker form select:focus,
+      .tracker form input:focus {
+        border-color: #0074d9;
+        outline: none;
+      }
+
+      .tracker form button {
+        background: #0074d9;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .tracker form button:hover {
+        background: #0074d9;
+      }
+
+      .tracker-result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="tracker.html">Activity Tracker</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="tracker">
+        <h2>Gym Activity Tracker</h2>
+        <form onsubmit="calculateCaloriesBurned(); return false;">
+          <label for="workout">Workout Type:</label>
+          <select id="workout">
+            <option value="hiit">HIIT Workouts</option>
+            <option value="power_yoga">Power Yoga</option>
+            <option value="bootcamp">Bootcamp</option>
+            <option value="cycling_blast">Cycling Blast</option>
+            <option value="core_sculpt">Core Sculpt</option>
+            <option value="kickboxing">Kickboxing</option>
+          </select>
+          <label for="time">Workout Duration (minutes):</label>
+          <input type="number" id="time" required min="1" />
+          <button type="submit">Track Your Burn</button>
+        </form>
+        <div id="result" class="tracker-result"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Fitness Center. All rights reserved.</p>
+    </footer>
+    <script>
+      function calculateCaloriesBurned() {
+        const workout = document.getElementById("workout").value;
+        const time = parseInt(document.getElementById("time").value);
+        let caloriesPerMinute;
+
+        // Define calories per minute for each workout type
+        switch (workout) {
+          case "hiit":
+            caloriesPerMinute = 15; // High Intensity
+            break;
+          case "power_yoga":
+            caloriesPerMinute = 7; // Moderate Intensity
+            break;
+          case "bootcamp":
+            caloriesPerMinute = 12; // High Intensity
+            break;
+          case "cycling_blast":
+            caloriesPerMinute = 10; // Medium Intensity
+            break;
+          case "core_sculpt":
+            caloriesPerMinute = 8; // Focused Core Work
+            break;
+          case "kickboxing":
+            caloriesPerMinute = 13; // High Intensity
+            break;
+        }
+
+        // Calculate total calories burned
+        const totalCalories = caloriesPerMinute * time;
+
+        // Display the result
+        document.getElementById("result").textContent = `Fantastic effort! You've burned approximately ${totalCalories} calories.`;
+      }
+    </script>
+  </body>
+</html>
